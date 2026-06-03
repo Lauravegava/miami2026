@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miami 2026 ⚽🌴 Laura, Oscar & Olga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060614;
+  --bg2: #0e0e2a;
+  --bg3: #141432;
+  --pink: #FF2D78;
+  --cyan: #00F5FF;
+  --gold: #FFD700;
+  --green: #39FF14;
+  --purple: #B44FFF;
+  --coral: #FF6B35;
+  --white: #ffffff;
+  --gray: #7777aa;
+  --gray2: #aaaacc;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--pink), var(--cyan)); border-radius: 3px; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 900;
+  background: rgba(6,6,20,0.85);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(0,245,255,0.15);
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem;
+  background: linear-gradient(90deg, var(--pink), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
+}
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links a {
+  color: var(--gray2); text-decoration: none;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; transition: color 0.25s;
+}
+.nav-links a:hover { color: var(--cyan); }
+.nav-ics-btn {
+  background: transparent; border: 1px solid var(--gold);
+  color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 30px;
+  font-size: 0.7rem; font-weight: 700; cursor: pointer;
+  letter-spacing: 0.08em; transition: all 0.25s;
+}
+.nav-ics-btn:hover { background: var(--gold); color: var(--bg); }
+
+/* ─── HERO ─── */
+#hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 80px 2rem 4rem; position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 40%, rgba(255,45,120,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 40%, rgba(0,245,255,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(57,255,20,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 0%, rgba(180,79,255,0.12) 0%, transparent 60%);
+  animation: hbPulse 6s ease-in-out infinite alternate;
+}
+@keyframes hbPulse {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.03); }
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,245,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,245,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-deco {
+  position: absolute; font-size: 5rem; opacity: 0.06;
+  animation: floatDeco linear infinite;
+  pointer-events: none; user-select: none;
+}
+@keyframes floatDeco {
+  0% { transform: translateY(110vh) rotate(0deg); }
+  100% { transform: translateY(-20vh) rotate(360deg); }
+}
+
+.hero-top-tag {
+  position: relative; z-index: 1;
+  background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.4);
+  color: var(--gold); padding: 0.4rem 1.2rem; border-radius: 30px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 1.5rem;
+  animation: fadeSlideDown 0.8s ease forwards;
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5rem, 18vw, 14rem);
+  line-height: 0.88; text-align: center;
+  position: relative; z-index: 1;
+  animation: fadeSlideUp 0.9s 0.1s ease both;
+}
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.t-miami {
+  display: block;
+  background: linear-gradient(135deg, var(--pink) 0%, var(--coral) 40%, var(--gold) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 40px rgba(255,45,120,0.4));
+  animation: titlePulse 3s ease-in-out infinite alternate;
+}
+@keyframes titlePulse {
+  from { filter: drop-shadow(0 0 25px rgba(255,45,120,0.4)); }
+  to { filter: drop-shadow(0 0 60px rgba(255,45,120,0.7)) drop-shadow(0 0 100px rgba(255,107,53,0.3)); }
+}
+.t-2026 {
+  display: block;
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 30px rgba(0,245,255,0.4));
+}
+
+.hero-sub {
+  font-family: 'Pacifico', cursive;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  color: var(--gold); margin: 1.2rem 0 2rem;
+  position: relative; z-index: 1;
+  animation: fadeSlideUp 0.9s 0.2s ease both;
+}
+
+.travelers {
+  display: flex; gap: 0.8rem; flex-wrap: wrap;
+  justify-content: center; margin-bottom: 3rem;
+  position: relative; z-index: 1;
+  animation: fadeSlideUp 0.9s 0.3s ease both;
+}
+.traveler-badge {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(0,245,255,0.25);
+  border-radius: 40px; padding: 0.5rem 1.4rem;
+  font-size: 0.9rem; font-weight: 700; color: var(--cyan);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+.traveler-badge:hover {
+  border-color: var(--cyan);
+  background: rgba(0,245,255,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,245,255,0.2);
+}
+
+/* countdown */
+.cd-wrap {
+  position: relative; z-index: 1; text-align: center;
+  animation: fadeSlideUp 0.9s 0.4s ease both;
+}
+.cd-label {
+  font-size: 0.72rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gray2); margin-bottom: 1rem;
+}
+.cd-row { display: flex; align-items: flex-start; justify-content: center; gap: 0.5rem; }
+.cd-unit { display: flex; flex-direction: column; align-items: center; }
+.cd-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem); line-height: 1;
+  background: linear-gradient(180deg, var(--white) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(0,245,255,0.5));
+  min-width: 2ch; text-align: center;
+  transition: all 0.3s;
+}
+.cd-unit-lbl {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gray);
+}
+.cd-colon {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem); color: var(--pink);
+  margin-top: 0.05em; animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.cd-sub {
+  margin-top: 1.2rem; font-size: 0.82rem; color: var(--gray2);
+}
+.cd-sub span { color: var(--pink); font-weight: 700; }
+.cd-arrived {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem; color: var(--green);
+  animation: titlePulse 1s ease-in-out infinite alternate;
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pink) 30%, var(--cyan) 70%, transparent);
+}
+
+/* ─── STATS BAR ─── */
+.stats-bar {
+  display: flex; flex-wrap: wrap; gap: 0;
+  background: rgba(255,255,255,0.015);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.stat-item {
+  flex: 1; min-width: 130px; text-align: center;
+  padding: 2.5rem 1rem;
+  border-right: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.3s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(255,255,255,0.03); }
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem;
+  background: linear-gradient(135deg, var(--pink), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.stat-lbl {
+  font-size: 0.7rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gray); margin-top: 0.3rem;
+}
+
+/* ─── SECTIONS ─── */
+.section-wrap { max-width: 1300px; margin: 0 auto; padding: 5rem 2rem; }
+.sec-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-align: center; line-height: 1;
+}
+.sec-sub {
+  text-align: center; color: var(--gray2);
+  font-size: 0.78rem; letter-spacing: 0.22em;
+  text-transform: uppercase; margin: 0.6rem 0 3rem;
+}
+.g-pink {
+  background: linear-gradient(135deg, var(--pink), var(--coral));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.g-cyan {
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.g-gold {
+  background: linear-gradient(135deg, var(--gold), var(--coral));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* ─── CALENDAR GRID ─── */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.9rem;
+}
+.day-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 1.4rem;
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.day-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,45,120,0.08), rgba(0,245,255,0.08));
+  opacity: 0; transition: opacity 0.3s;
+}
+.day-card:hover { transform: translateY(-5px); }
+.day-card:hover::before { opacity: 1; }
+.day-card.type-normal:hover { border-color: var(--cyan); box-shadow: 0 16px 40px rgba(0,245,255,0.12); }
+.day-card.type-birthday { border-color: rgba(255,215,0,0.3); background: rgba(255,215,0,0.04); }
+.day-card.type-birthday:hover { border-color: var(--gold); box-shadow: 0 16px 40px rgba(255,215,0,0.2); }
+.day-card.type-game { border-color: rgba(57,255,20,0.3); background: rgba(57,255,20,0.04); }
+.day-card.type-game:hover { border-color: var(--green); box-shadow: 0 16px 40px rgba(57,255,20,0.2); }
+.day-card.type-travel { border-color: rgba(0,245,255,0.2); }
+.day-card.type-travel:hover { border-color: var(--cyan); box-shadow: 0 16px 40px rgba(0,245,255,0.15); }
+
+.dc-top {
+  font-size: 0.65rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gray); margin-bottom: 0.7rem;
+}
+.dc-emoji { font-size: 2.2rem; margin-bottom: 0.5rem; display: block; }
+.dc-title {
+  font-size: 0.88rem; font-weight: 800;
+  line-height: 1.3; margin-bottom: 0.25rem;
+}
+.dc-sub { font-size: 0.75rem; color: var(--gray2); line-height: 1.4; }
+.dc-tag {
+  display: inline-block; margin-top: 0.9rem;
+  padding: 0.2rem 0.7rem; border-radius: 20px;
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tag-bday { background: rgba(255,215,0,0.15); color: var(--gold); border: 1px solid rgba(255,215,0,0.35); }
+.tag-game { background: rgba(57,255,20,0.15); color: var(--green); border: 1px solid rgba(57,255,20,0.35); }
+.tag-travel { background: rgba(0,245,255,0.12); color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); }
+
+/* ─── ICS ALL BTN ─── */
+.ics-all-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.6rem; margin: 2.5rem auto 0; max-width: 300px;
+  background: transparent; border: 1px solid var(--cyan);
+  color: var(--cyan); padding: 0.9rem 2rem; border-radius: 50px;
+  font-size: 0.8rem; font-weight: 700; cursor: pointer;
+  letter-spacing: 0.1em; transition: all 0.25s;
+}
+.ics-all-btn:hover { background: var(--cyan); color: var(--bg); transform: translateY(-2px); }
+
+/* ─── MODAL ─── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(6,6,20,0.92); backdrop-filter: blur(20px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem; opacity: 0; visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-overlay.open { opacity: 1; visibility: visible; }
+.modal-box {
+  background: var(--bg2); border-radius: 22px;
+  border: 1px solid rgba(0,245,255,0.25);
+  max-width: 680px; width: 100%; max-height: 88vh;
+  overflow-y: auto; padding: 2.5rem;
+  position: relative; transform: scale(0.92);
+  transition: transform 0.3s;
+}
+.modal-overlay.open .modal-box { transform: scale(1); }
+.modal-box::-webkit-scrollbar { width: 3px; }
+.modal-box::-webkit-scrollbar-thumb { background: var(--cyan); }
+.modal-x {
+  position: absolute; top: 1.2rem; right: 1.2rem;
+  background: rgba(255,255,255,0.07); border: none;
+  color: var(--white); width: 34px; height: 34px;
+  border-radius: 50%; cursor: pointer; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.modal-x:hover { background: var(--pink); }
+.modal-date-lbl {
+  font-size: 0.7rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gray); margin-bottom: 0.4rem;
+}
+.modal-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
+  line-height: 1.1; margin-bottom: 0.3rem;
+}
+.modal-sub { color: var(--gray2); margin-bottom: 1.8rem; font-size: 0.9rem; }
+.modal-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.8rem; }
+.chip {
+  padding: 0.28rem 0.75rem;
+  background: rgba(255,45,120,0.1);
+  border: 1px solid rgba(255,45,120,0.25);
+  border-radius: 20px; font-size: 0.72rem; color: var(--pink);
+}
+.modal-sec { margin-bottom: 1.5rem; }
+.modal-sec-lbl {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 0.6rem;
+}
+.modal-sec-lbl::after {
+  content: ''; flex: 1; height: 1px; background: rgba(0,245,255,0.18);
+}
+.modal-text {
+  color: rgba(255,255,255,0.78); line-height: 1.75; font-size: 0.875rem;
+}
+.modal-btns { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 2rem; }
+.btn-gcal {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: linear-gradient(135deg, #4285f4, #0f9d58);
+  color: white; text-decoration: none;
+  padding: 0.7rem 1.4rem; border-radius: 40px;
+  font-size: 0.78rem; font-weight: 700; transition: all 0.25s;
+}
+.btn-gcal:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(66,133,244,0.35); }
+.btn-ics {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; border: 1px solid var(--purple);
+  color: var(--purple); padding: 0.7rem 1.4rem; border-radius: 40px;
+  font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.25s;
+}
+.btn-ics:hover { background: var(--purple); color: var(--white); }
+
+/* ─── PHOTO ALBUM ─── */
+.drop-zone {
+  border: 2px dashed rgba(255,45,120,0.35);
+  border-radius: 18px; padding: 3rem 2rem;
+  text-align: center; cursor: pointer;
+  transition: all 0.3s; background: rgba(255,45,120,0.02);
+  margin-bottom: 2rem; position: relative;
+}
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: var(--pink); background: rgba(255,45,120,0.07);
+}
+.drop-icon { font-size: 3rem; display: block; margin-bottom: 0.8rem; }
+.drop-text { color: var(--gray2); font-size: 0.88rem; }
+.drop-text strong { color: var(--pink); }
+#photoFileInput { display: none; }
+
+.album-controls {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+}
+.album-count { color: var(--gray2); font-size: 0.8rem; }
+.album-clear-btn {
+  background: transparent; border: 1px solid rgba(255,45,120,0.4);
+  color: var(--pink); padding: 0.4rem 1rem; border-radius: 30px;
+  font-size: 0.72rem; font-weight: 700; cursor: pointer; transition: all 0.25s;
+}
+.album-clear-btn:hover { background: var(--pink); color: var(--white); }
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+.photo-item {
+  position: relative; border-radius: 12px; overflow: hidden;
+  aspect-ratio: 1; cursor: pointer;
+  background: var(--bg3);
+}
+.photo-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.35s;
+}
+.photo-item:hover img { transform: scale(1.06); }
+.photo-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(transparent 55%, rgba(6,6,20,0.88));
+  opacity: 0; transition: opacity 0.3s;
+  display: flex; align-items: flex-end; padding: 0.9rem;
+}
+.photo-item:hover .photo-overlay { opacity: 1; }
+.photo-cap { font-size: 0.75rem; color: var(--white); font-weight: 600; }
+.photo-del {
+  position: absolute; top: 0.5rem; right: 0.5rem;
+  background: rgba(255,45,120,0.85); border: none; color: var(--white);
+  width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+  font-size: 0.75rem; display: none; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.photo-item:hover .photo-del { display: flex; }
+.photo-del:hover { background: var(--pink); }
+
+.empty-album {
+  text-align: center; padding: 4rem 2rem; color: var(--gray);
+}
+.empty-album .empty-icon { font-size: 4rem; display: block; margin-bottom: 1rem; }
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.96); backdrop-filter: blur(8px);
+  display: none; align-items: center; justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 92vh;
+  object-fit: contain; border-radius: 8px;
+  box-shadow: 0 0 80px rgba(0,245,255,0.2);
+  cursor: default;
+}
+.lb-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: rgba(255,255,255,0.1); border: none; color: var(--white);
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.lb-close:hover { background: var(--pink); }
+
+/* ─── PLACES ─── */
+.places-header {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+}
+.places-progress { font-size: 0.8rem; color: var(--gray2); }
+.places-progress span { color: var(--green); font-weight: 700; }
+.progress-bar-wrap {
+  height: 4px; background: rgba(255,255,255,0.08);
+  border-radius: 2px; margin-bottom: 2rem; overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--cyan));
+  border-radius: 2px; transition: width 0.5s ease;
+}
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 0.6rem;
+}
+.place-item {
+  display: flex; align-items: center; gap: 0.9rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; cursor: pointer; transition: all 0.25s;
+}
+.place-item:hover {
+  border-color: rgba(0,245,255,0.25);
+  background: rgba(0,245,255,0.04);
+}
+.place-item.done {
+  border-color: rgba(57,255,20,0.25);
+  background: rgba(57,255,20,0.04);
+}
+.place-check {
+  width: 20px; height: 20px; flex-shrink: 0;
+  border-radius: 50%; border: 2px solid rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; transition: all 0.25s;
+}
+.place-item.done .place-check {
+  border-color: var(--green); background: var(--green); color: var(--bg);
+  font-weight: 900;
+}
+.place-emoji { font-size: 1.1rem; }
+.place-name {
+  font-size: 0.83rem; font-weight: 500; flex: 1;
+  transition: color 0.25s;
+}
+.place-item.done .place-name { color: var(--gray); text-decoration: line-through; }
+
+/* ─── FOOTER ─── */
+footer {
+  text-align: center; padding: 3.5rem 2rem;
+  color: var(--gray); font-size: 0.78rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--pink), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem; display: block;
+}
+footer p { margin-top: 0.3rem; }
+.footer-tag {
+  display: inline-block; margin-top: 1rem;
+  background: rgba(255,215,0,0.08);
+  border: 1px solid rgba(255,215,0,0.25);
+  color: var(--gold); padding: 0.35rem 1rem; border-radius: 20px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .cal-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .places-grid { grid-template-columns: 1fr; }
+  .stats-bar { flex-direction: row; }
+  .stat-item { padding: 1.5rem 0.5rem; }
+  .modal-box { padding: 1.8rem 1.4rem; }
+}
+
+/* ─── CONFETTI ─── */
+.confetti-piece {
+  position: fixed; width: 8px; height: 14px;
+  border-radius: 2px; pointer-events: none;
+  animation: confettiFall linear forwards;
+  z-index: 9999;
+}
+@keyframes confettiFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">⚽ MIAMI 2026</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Inicio</a></li>
+    <li><a href="#itinerary">Itinerario</a></li>
+    <li><a href="#album">Fotos</a></li>
+    <li><a href="#places">Lugares</a></li>
+  </ul>
+  <button class="nav-ics-btn" onclick="downloadAllICS()">📅 Todo al Calendario</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-top-tag">🏆 FIFA WORLD CUP 2026 • MIAMI, FLORIDA</div>
+
+  <div class="hero-title">
+    <span class="t-miami">MIAMI</span>
+    <span class="t-2026">2026</span>
+  </div>
+
+  <p class="hero-sub">🌴 Copa del Mundo · 22 Junio – 2 Julio 🌴</p>
+
+  <div class="travelers">
+    <div class="traveler-badge">👸 Laura</div>
+    <div class="traveler-badge">🧔 Oscar</div>
+    <div class="traveler-badge">👩 Olga</div>
+  </div>
+
+  <div class="cd-wrap">
+    <p class="cd-label">✈️ El viaje empieza en</p>
+    <div class="cd-row" id="cdRow">
+      <div class="cd-unit">
+        <div class="cd-num" id="cdDays">00</div>
+        <div class="cd-unit-lbl">Días</div>
+      </div>
+      <div class="cd-colon">:</div>
+      <div class="cd-unit">
+        <div class="cd-num" id="cdHours">00</div>
+        <div class="cd-unit-lbl">Horas</div>
+      </div>
+      <div class="cd-colon">:</div>
+      <div class="cd-unit">
+        <div class="cd-num" id="cdMins">00</div>
+        <div class="cd-unit-lbl">Min</div>
+      </div>
+      <div class="cd-colon">:</div>
+      <div class="cd-unit">
+        <div class="cd-num" id="cdSecs">00</div>
+        <div class="cd-unit-lbl">Seg</div>
+      </div>
+    </div>
+    <p class="cd-sub" id="cdSub">Salida: <span>Lunes 22 Junio · 12:08 PM</span> · Miami ✈️</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">11</div>
+    <div class="stat-lbl">Días de viaje</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">3</div>
+    <div class="stat-lbl">Viajeros</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">1</div>
+    <div class="stat-lbl">Partido Mundial</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">1</div>
+    <div class="stat-lbl">Cumpleaños 🎂</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">∞</div>
+    <div class="stat-lbl">Recuerdos</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ITINERARY -->
+<div class="section-wrap" id="itinerary">
+  <div class="sec-title g-cyan">ITINERARIO</div>
+  <p class="sec-sub">Haz clic en cada día para ver los detalles y agregar al calendario</p>
+  <div class="cal-grid" id="calGrid"></div>
+  <button class="ics-all-btn" onclick="downloadAllICS()">📅 Descargar itinerario completo (.ics)</button>
+</div>
+
+<div class="divider"></div>
+
+<!-- PHOTO ALBUM -->
+<div class="section-wrap" id="album">
+  <div class="sec-title g-pink">ÁLBUM DE FOTOS</div>
+  <p class="sec-sub">Sube las fotos del viaje · Se guardan en tu navegador</p>
+
+  <div class="drop-zone" id="dropZone">
+    <input type="file" id="photoFileInput" multiple accept="image/*">
+    <span class="drop-icon">📸</span>
+    <p class="drop-text">
+      <strong>Haz clic</strong> o arrastra tus fotos aquí<br>
+      <small style="color:var(--gray);margin-top:0.4rem;display:block">JPG · PNG · GIF · WEBP</small>
+    </p>
+  </div>
+
+  <div class="album-controls" id="albumControls" style="display:none">
+    <span class="album-count" id="albumCount">0 fotos</span>
+    <button class="album-clear-btn" onclick="clearAllPhotos()">🗑 Borrar todo</button>
+  </div>
+
+  <div class="photo-grid" id="photoGrid"></div>
+  <div class="empty-album" id="emptyAlbum">
+    <span class="empty-icon">🌴</span>
+    <p>¡Aquí irán los mejores momentos del viaje!</p>
+    <p style="font-size:0.8rem;margin-top:0.4rem">Sube fotos para llenar este álbum</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PLACES -->
+<div class="section-wrap" id="places">
+  <div class="sec-title g-gold">LUGARES</div>
+  <p class="sec-sub">Marca los lugares que visiten durante el viaje</p>
+  <div class="places-header">
+    <span class="places-progress" id="placesProgress"><span id="doneCount">0</span> / 25 visitados</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progressBar" style="width:0%"></div>
+  </div>
+  <div class="places-grid" id="placesGrid"></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">MIAMI 2026 ⚽</span>
+  <p>Laura · Oscar · Olga</p>
+  <p>22 Junio – 2 Julio 2026</p>
+  <div class="footer-tag">#MundialMiami #FIFAWorldCup2026</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-x" id="modalClose">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  TRIP DATA
+// ═══════════════════════════════════════════════
+const days = [
+  {
+    date:'2026-06-22', label:'Lunes 22 Jun', day:1,
+    title:'Llegada a Miami', sub:'El viaje comienza ✈️', emoji:'✈️', type:'travel',
+    morning: null,
+    afternoon:'Vuelo de salida a las <strong>12:08 PM</strong>. ¡Se empieza el sueño!',
+    night:'Llegada a Miami a las <strong>7:55 PM</strong>. Check-in en el Airbnb. Primer contacto con el aire caliente de Miami 🌴 Descanso para la aventura que empieza.',
+    chips:['Salida 12:08 PM','Llegada 7:55 PM','Check-in Airbnb'],
+    tag:{txt:'✈️ Viaje', cls:'tag-travel'}
+  },
+  {
+    date:'2026-06-23', label:'Martes 23 Jun', day:2,
+    title:'El Miami Icónico', sub:'Playa & Art Deco', emoji:'🏖️', type:'normal',
+    morning:'<strong>9:00 AM</strong> — Lummus Park y la playa de Miami Beach. Las icónicas casetas de salvavidas de colores. El olor a protector solar y la brisa del Atlántico. Biscayne Bay de fondo.',
+    afternoon:'<strong>12:30 PM</strong> — Ocean Drive: caminar por la emblemática avenida admirando la arquitectura Art Deco de los años 30. Almuerzo en terraza frente al mar o en la bohemia Espanola Way.<br><br><strong>3:30 PM</strong> — Lincoln Road: el bulevar peatonal con tiendas, cafés y galerías. Ideal para pasear y hacer compras.',
+    night:'<strong>6:00 PM</strong> — South Pointe Park para ver el atardecer, los cruceros salir del puerto y caminar por el muelle.<br><br>🍽️ Cena en <strong>1800 Lucky</strong> o <strong>Gramps</strong><br>🍦 Helado obligatorio en <strong>Salt & Straw</strong>',
+    chips:['South Beach','Ocean Drive','Art Deco','Lincoln Road','South Pointe Park','Salt & Straw','Espanola Way'],
+    transport:'Uber/Lyft mañana y noche · Todo lo demás caminando'
+  },
+  {
+    date:'2026-06-24', label:'Miércoles 24 Jun', day:3,
+    title:'Cultura & Historia', sub:'Vistas Urbanas', emoji:'🏛️', type:'normal',
+    morning:'<strong>9:30 AM</strong> — Vizcaya Museum and Gardens en Coconut Grove: mansión de estilo renacentista italiano junto a la bahía de Biscayne, rodeada de jardines majestuosos. 2-3 horas. ¡Muy fotogénica!',
+    afternoon:'<strong>1:00 PM</strong> — Little Havana (Calle Ocho): almuerzo de auténtica comida cubana (ropa vieja, sándwich cubano). Parque del Dominó con los locales jugando. Cafecito en una ventanita. Helado artesanal en <strong>Azúcar</strong>.',
+    night:'<strong>6:30 PM</strong> — Brickell City Centre y luego subir a tomar un cóctel en <strong>Sugar</strong> o <strong>Rosa Sky</strong> para las mejores vistas del skyline iluminado de Miami. ✨',
+    chips:['Vizcaya Museum','Coconut Grove','Little Havana','Calle Ocho','Parque del Dominó','Azúcar Ice Cream','Brickell City Centre','Sugar Rooftop'],
+    transport:'Uber/Lyft · Metromover en Brickell (gratis)'
+  },
+  {
+    date:'2026-06-25', label:'Jueves 25 Jun', day:4,
+    title:'Arte Urbano & Diseño', sub:'Compras Locales', emoji:'🎨', type:'normal',
+    morning:'<strong>10:00 AM</strong> — Wynwood Walls: el corazón del arte callejero de Miami. Ir temprano para evitar el calor y las multitudes. Explorar calles adyacentes llenas de murales y galerías independientes.',
+    afternoon:'<strong>1:00 PM</strong> — Almuerzo en la zona: mercado asiático <strong>1-800-Lucky</strong>, <strong>Doya</strong> (mediterránea), pizza en <strong>Gramps</strong>. De postre: las legendarias donas de <strong>The Salty Donut</strong> 🍩<br><br><strong>3:30 PM</strong> — Miami Design District: arquitectura moderna de lujo, esculturas públicas de acceso libre y ambiente vanguardista.',
+    night:'Noche libre en Wynwood o Design District. Happy hour en algún bar de la zona 🍹',
+    chips:['Wynwood Walls','1-800-Lucky','The Salty Donut','Design District','Doya','Gramps'],
+    transport:'Uber/Lyft · Freebee en Wynwood/Design District (gratis)'
+  },
+  {
+    date:'2026-06-26', label:'Viernes 26 Jun', day:5,
+    title:'🎂 ¡CUMPLEAÑOS! 🎂', sub:'¡A celebrar en Miami!', emoji:'🎉', type:'birthday',
+    morning:'🥂 <strong>Bote Millonario con Mimosa</strong> en Biscayne Bay · El mejor plan para empezar un cumpleaños: sol, agua turquesa y champán.',
+    afternoon:'🏖️ <strong>Playita</strong> — tarde relajada en la playa. Broncearse, darse un chapuzón y disfrutar la vibra de Miami.',
+    night:'🎊 <strong>Cenita especial de cumpleaños</strong> — el lugar es TBD pero tiene que estar a la altura de la ocasión 🌟',
+    chips:['Bote Millonario','Mimosas','Biscayne Bay','Playita','Cena especial'],
+    tag:{txt:'🎂 Cumpleaños', cls:'tag-bday'}
+  },
+  {
+    date:'2026-06-27', label:'Sábado 27 Jun', day:6,
+    title:'DÍA DEL PARTIDO', sub:'⚽ Copa del Mundo 2026', emoji:'⚽', type:'game',
+    morning:'☁️ Paseíto chill — <strong>Target Doral</strong> para ultimar detalles, comprar snacks y lo que falte.',
+    afternoon:'Preparación para el partido. Buscar ambiente mundialista por Miami. Ponerse los colores. ¡Calentar el ánimo! 🔥',
+    night:'🏟️ <strong>¡PARTIDO! — 7:30 PM</strong><br>Copa del Mundo 2026 en Miami · ¡A alentaaaar con todo! 🇨🇴⚽',
+    chips:['Target Doral','Copa del Mundo 2026','Partido 7:30 PM','Miami'],
+    tag:{txt:'⚽ Partido', cls:'tag-game'}
+  },
+  {
+    date:'2026-06-28', label:'Domingo 28 Jun', day:7,
+    title:'Outlets Dolphin Mall', sub:'Día de compras 🛍️', emoji:'🛍️', type:'normal',
+    morning:'Rumbo a <strong>Dolphin Mall</strong> — uno de los outlets más grandes de Florida con más de 240 tiendas.',
+    afternoon:'Recorrer las tiendas, probar cosas ricas en el food court y cazar las mejores gangas.',
+    night:'Regresar al Airbnb cargados de compras 🎁',
+    chips:['Dolphin Mall','Outlets Florida','Compras','Food Court']
+  },
+  {
+    date:'2026-06-29', label:'Lunes 29 Jun', day:8,
+    title:'Key West', sub:'El punto más sur de EEUU 🔑', emoji:'🔑', type:'normal',
+    morning:'Salida temprana en carro hacia Key West (aprox. 2h) por la increíble <strong>Florida Keys Highway</strong> con vistas al mar a ambos lados de la carretera.',
+    afternoon:'<strong>Mallory Square</strong> · <strong>Duval Street</strong> · La histórica <strong>Casa de Hemingway</strong> con sus 6 dedos de gato ✍️',
+    night:'🥧 Comer el auténtico <strong>Pastel de Lima (Key Lime Pie)</strong> — es obligatorio en Key West. Regreso a Miami.',
+    chips:['Key West','Florida Keys Highway','Mallory Square','Duval Street','Casa de Hemingway','Key Lime Pie'],
+    transport:'Carro 🚗 (incluido en el plan)'
+  },
+  {
+    date:'2026-06-30', label:'Martes 30 Jun', day:9,
+    title:'Outlets Sawgrass', sub:'Premium Outlets 🏪', emoji:'🛒', type:'normal',
+    morning:'<strong>Sawgrass Mills</strong> — el outlet más grande del mundo con más de 350 tiendas de marcas premium.',
+    afternoon:'Un día entero dedicado a las mejores marcas con los mejores precios. ¡Estrategia de compras activada!',
+    night:'Regresar al Airbnb. Organizar maletas y todo lo comprado 😄',
+    chips:['Sawgrass Mills','Premium Outlets','350+ tiendas','Sunrise, FL'],
+    transport:'Carro 🚗'
+  },
+  {
+    date:'2026-07-01', label:'Miércoles 1 Jul', day:10,
+    title:'Miami Brickell', sub:'Playa & Maletas', emoji:'🏙️', type:'normal',
+    morning:'☀️ Última mañana en la playa de Miami — que el sol se quede grabado en la piel.',
+    afternoon:'Paseo por <strong>Brickell</strong>: el skyline, los rascacielos, el ambiente cosmopolita. Disfrutar Miami una última vez.',
+    night:'🧳 Empacar maletas. Última cena en Miami 🥹 Cada bocado como si fuera el último.',
+    chips:['Brickell','Última playa','Skyline Miami','Empacar'],
+    transport:'Carro 🚗'
+  },
+  {
+    date:'2026-07-02', label:'Jueves 2 Jul', day:11,
+    title:'Vuelta a Casa', sub:'Hasta la próxima, Miami 🌴', emoji:'🏠', type:'travel',
+    morning:'Desayuno tranquilo. Check-out del Airbnb. Últimas fotos, últimas memorias.',
+    afternoon:'<strong>Salida 5:14 PM</strong> desde Miami International Airport.',
+    night:'Llegada <strong>10:55 PM</strong> · Con el corazón lleno de Miami y la maleta llena de compras 💓',
+    chips:['Check-out','Salida 5:14 PM','Llegada 10:55 PM'],
+    tag:{txt:'✈️ Regreso', cls:'tag-travel'}
+  }
+];
+
+const placesList = [
+  {n:'South Beach',e:'🏖️'},{n:'Ocean Drive',e:'🏛️'},{n:'Espanola Way',e:'🌸'},
+  {n:'Lincoln Road',e:'🛍️'},{n:'South Pointe Park',e:'🌅'},{n:'Vizcaya Museum & Gardens',e:'🏰'},
+  {n:'Little Havana (Calle Ocho)',e:'🇨🇺'},{n:'Parque del Dominó',e:'🎲'},{n:'Wynwood Walls',e:'🎨'},
+  {n:'The Salty Donut',e:'🍩'},{n:'Miami Design District',e:'✨'},{n:'Brickell City Centre',e:'🏙️'},
+  {n:'Sugar Rooftop Bar',e:'🍹'},{n:'Rosa Sky',e:'🌇'},{n:'Bayside Marketplace',e:'🛒'},
+  {n:'Pérez Art Museum (PAMM)',e:'🖼️'},{n:'Everglades National Park',e:'🐊'},
+  {n:'Dolphin Mall',e:'🐬'},{n:'Sawgrass Mills',e:'🏪'},{n:'Key West',e:'🔑'},
+  {n:'Casa de Hemingway',e:'📚'},{n:'Mallory Square',e:'🌅'},{n:'Salt & Straw',e:'🍦'},
+  {n:'1-800-Lucky',e:'🍜'},{n:'Azúcar Ice Cream',e:'🍨'}
+];
+
+// ═══════════════════════════════════════════════
+//  COUNTDOWN
+// ═══════════════════════════════════════════════
+const TRIP_START = new Date('2026-06-22T12:08:00');
+
+function updateCD() {
+  const diff = TRIP_START - new Date();
+  if (diff <= 0) {
+    document.getElementById('cdRow').innerHTML = '<p class="cd-arrived">🌴 ¡ESTAMOS EN MIAMI! 🌴</p>';
+    document.getElementById('cdSub').textContent = '¡El viaje ya comenzó!';
+    if (diff > -1000) confetti(80);
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cdDays').textContent = String(d).padStart(2,'0');
+  document.getElementById('cdHours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cdMins').textContent = String(m).padStart(2,'0');
+  document.getElementById('cdSecs').textContent = String(s).padStart(2,'0');
+}
+setInterval(updateCD, 1000);
+updateCD();
+
+// ═══════════════════════════════════════════════
+//  CALENDAR
+// ═══════════════════════════════════════════════
+function renderCalendar() {
+  const grid = document.getElementById('calGrid');
+  days.forEach(d => {
+    const card = document.createElement('div');
+    card.className = `day-card type-${d.type}`;
+    let tagHTML = d.tag ? `<div class="dc-tag ${d.tag.cls}">${d.tag.txt}</div>` : '';
+    let titleColor = d.type === 'birthday' ? 'var(--gold)' : d.type === 'game' ? 'var(--green)' : d.type === 'travel' ? 'var(--cyan)' : 'var(--white)';
+    card.innerHTML = `
+      <div class="dc-top">Día ${d.day} · ${d.label}</div>
+      <span class="dc-emoji">${d.emoji}</span>
+      <div class="dc-title" style="color:${titleColor}">${d.title}</div>
+      <div class="dc-sub">${d.sub||''}</div>
+      ${tagHTML}
+    `;
+    card.addEventListener('click', () => openModal(d));
+    grid.appendChild(card);
+  });
+}
+
+// ═══════════════════════════════════════════════
+//  MODAL
+// ═══════════════════════════════════════════════
+function openModal(d) {
+  const body = document.getElementById('modalBody');
+  const color = d.type==='birthday' ? 'var(--gold)' : d.type==='game' ? 'var(--green)' : d.type==='travel' ? 'var(--cyan)' : 'var(--pink)';
+
+  const chips = (d.chips||[]).map(c=>`<span class="chip">${c}</span>`).join('');
+  const secs = [];
+  if (d.morning) secs.push(`<div class="modal-sec"><div class="modal-sec-lbl">☀️ Mañana</div><p class="modal-text">${d.morning}</p></div>`);
+  if (d.afternoon) secs.push(`<div class="modal-sec"><div class="modal-sec-lbl">🌤️ Tarde</div><p class="modal-text">${d.afternoon}</p></div>`);
+  if (d.night) secs.push(`<div class="modal-sec"><div class="modal-sec-lbl">🌙 Noche</div><p class="modal-text">${d.night}</p></div>`);
+  if (d.transport) secs.push(`<div class="modal-sec"><div class="modal-sec-lbl">🚗 Transporte</div><p class="modal-text">${d.transport}</p></div>`);
+
+  body.innerHTML = `
+    <div class="modal-date-lbl">${d.label} · Día ${d.day} de 11</div>
+    <div class="modal-title" style="color:${color}">${d.emoji} ${d.title}</div>
+    ${d.sub ? `<div class="modal-sub">${d.sub}</div>` : ''}
+    ${chips ? `<div class="modal-chips">${chips}</div>` : ''}
+    ${secs.join('')}
+    <div class="modal-btns">
+      <a href="${gcalUrl(d)}" target="_blank" class="btn-gcal">📅 Agregar a Google Calendar</a>
+      <button class="btn-ics" onclick="dlICS([days.find(x=>x.date==='${d.date}')])">⬇️ Descargar .ics</button>
+    </div>
+  `;
+
+  document.getElementById('modalOverlay').classList.add('open');
+  if (d.type === 'birthday') setTimeout(()=>confetti(60), 300);
+  if (d.type === 'game') setTimeout(()=>soccerAnim(), 300);
+}
+
+document.getElementById('modalClose').onclick = closeModal;
+document.getElementById('modalOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+});
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+// ═══════════════════════════════════════════════
+//  GOOGLE CALENDAR & ICS
+// ═══════════════════════════════════════════════
+function gcalUrl(d) {
+  const ds = d.date.replace(/-/g,'');
+  const title = encodeURIComponent(`🌴 Miami 2026 – ${d.title} ${d.emoji}`);
+  const desc = encodeURIComponent([
+    d.morning ? `☀️ MAÑANA: ${d.morning.replace(/<[^>]+>/g,'')}` : '',
+    d.afternoon ? `🌤️ TARDE: ${d.afternoon.replace(/<[^>]+>/g,'')}` : '',
+    d.night ? `🌙 NOCHE: ${d.night.replace(/<[^>]+>/g,'')}` : ''
+  ].filter(Boolean).join('\n\n'));
+  return `https://calendar.google.com/calendar/r/eventedit?text=${title}&dates=${ds}/${ds}&details=${desc}&location=${encodeURIComponent('Miami, Florida, USA')}`;
+}
+
+function dlICS(arr) {
+  let events = arr.map(d => {
+    const ds = d.date.replace(/-/g,'');
+    const desc = [
+      d.morning ? `MAÑANA: ${d.morning.replace(/<[^>]+>/g,'')}` : '',
+      d.afternoon ? `TARDE: ${d.afternoon.replace(/<[^>]+>/g,'')}` : '',
+      d.night ? `NOCHE: ${d.night.replace(/<[^>]+>/g,'')}` : ''
+    ].filter(Boolean).join('\\n\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');
+    return [
+      'BEGIN:VEVENT',
+      `DTSTART;VALUE=DATE:${ds}`,
+      `DTEND;VALUE=DATE:${ds}`,
+      `SUMMARY:🌴 Miami 2026 – ${d.title}`,
+      `DESCRIPTION:${desc}`,
+      'LOCATION:Miami\\, Florida\\, USA',
+      `UID:miami2026-${ds}-${Math.random().toString(36).slice(2)}@trip`,
+      'END:VEVENT'
+    ].join('\r\n');
+  }).join('\r\n');
+
+  const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Miami2026//ES\r\nCALSCALE:GREGORIAN\r\n${events}\r\nEND:VCALENDAR`;
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(new Blob([ics], {type:'text/calendar'})),
+    download: arr.length === 1 ? `miami2026-${arr[0].date}.ics` : 'miami2026-itinerario-completo.ics'
+  });
+  a.click();
+}
+
+function downloadAllICS() { dlICS(days); }
+
+// ═══════════════════════════════════════════════
+//  PHOTO ALBUM — IndexedDB
+// ═══════════════════════════════════════════════
+let db;
+const DB = 'Miami2026', VER = 1, STORE = 'photos';
+
+function openDB() {
+  return new Promise((res,rej) => {
+    const r = indexedDB.open(DB, VER);
+    r.onupgradeneeded = e => {
+      const d = e.target.result;
+      if (!d.objectStoreNames.contains(STORE))
+        d.createObjectStore(STORE, {keyPath:'id', autoIncrement:true});
+    };
+    r.onsuccess = e => { db = e.target.result; res(); };
+    r.onerror = rej;
+  });
+}
+function dbTx(mode) { return db.transaction(STORE, mode).objectStore(STORE); }
+function dbGetAll() { return new Promise((res,rej) => { const r = dbTx('readonly').getAll(); r.onsuccess=()=>res(r.result); r.onerror=rej; }); }
+function dbAdd(rec) { return new Promise((res,rej) => { const r = dbTx('readwrite').add(rec); r.onsuccess=()=>res(r.result); r.onerror=rej; }); }
+function dbDel(id) { return new Promise((res,rej) => { const r = dbTx('readwrite').delete(id); r.onsuccess=res; r.onerror=rej; }); }
+function dbClear() { return new Promise((res,rej) => { const r = dbTx('readwrite').clear(); r.onsuccess=res; r.onerror=rej; }); }
+
+async function refreshAlbum() {
+  const photos = await dbGetAll();
+  const grid = document.getElementById('photoGrid');
+  const empty = document.getElementById('emptyAlbum');
+  const ctrl = document.getElementById('albumControls');
+  const cnt = document.getElementById('albumCount');
+  grid.innerHTML = '';
+
+  if (!photos.length) {
+    empty.style.display = 'block';
+    ctrl.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  ctrl.style.display = 'flex';
+  cnt.textContent = `${photos.length} foto${photos.length!==1?'s':''}`;
+
+  photos.forEach(p => {
+    const item = document.createElement('div');
+    item.className = 'photo-item';
+    item.innerHTML = `
+      <img src="${p.data}" alt="${p.name}" loading="lazy">
+      <div class="photo-overlay"><span class="photo-cap">${p.name}</span></div>
+      <button class="photo-del" title="Eliminar" data-id="${p.id}">✕</button>
+    `;
+    item.querySelector('img').onclick = () => openLightbox(p.data);
+    item.querySelector('.photo-del').onclick = async e => {
+      e.stopPropagation();
+      await dbDel(p.id);
+      refreshAlbum();
+    };
+    grid.appendChild(item);
+  });
+}
+
+async function clearAllPhotos() {
+  if (!confirm('¿Borrar todas las fotos?')) return;
+  await dbClear();
+  refreshAlbum();
+}
+
+async function handleFiles(files) {
+  for (const f of [...files]) {
+    if (!f.type.startsWith('image/')) continue;
+    const data = await new Promise(res => {
+      const r = new FileReader();
+      r.onload = e => res(e.target.result);
+      r.readAsDataURL(f);
+    });
+    await dbAdd({ name: f.name.replace(/\.[^.]+$/,''), data, ts: Date.now() });
+  }
+  refreshAlbum();
+}
+
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('photoFileInput');
+dropZone.onclick = () => fileInput.click();
+fileInput.onchange = e => handleFiles(e.target.files);
+dropZone.ondragover = e => { e.preventDefault(); dropZone.classList.add('drag-over'); };
+dropZone.ondragleave = () => dropZone.classList.remove('drag-over');
+dropZone.ondrop = e => { e.preventDefault(); dropZone.classList.remove('drag-over'); handleFiles(e.dataTransfer.files); };
+
+// Lightbox
+function openLightbox(src) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.getElementById('lbClose').onclick = () => document.getElementById('lightbox').classList.remove('open');
+document.getElementById('lightbox').onclick = e => { if (e.target === document.getElementById('lightbox')) document.getElementById('lightbox').classList.remove('open'); };
+
+// ═══════════════════════════════════════════════
+//  PLACES CHECKLIST
+// ═══════════════════════════════════════════════
+function getVisited() { return JSON.parse(localStorage.getItem('miami26_visited')||'[]'); }
+function setVisited(v) { localStorage.setItem('miami26_visited', JSON.stringify(v)); }
+
+function renderPlaces() {
+  const grid = document.getElementById('placesGrid');
+  const visited = getVisited();
+  grid.innerHTML = '';
+  placesList.forEach((p, i) => {
+    const done = visited.includes(i);
+    const item = document.createElement('div');
+    item.className = `place-item${done?' done':''}`;
+    item.innerHTML = `
+      <div class="place-check">${done?'✓':''}</div>
+      <span class="place-emoji">${p.e}</span>
+      <span class="place-name">${p.n}</span>
+    `;
+    item.onclick = () => {
+      const v = getVisited();
+      const idx = v.indexOf(i);
+      idx===-1 ? v.push(i) : v.splice(idx,1);
+      setVisited(v);
+      renderPlaces();
+    };
+    grid.appendChild(item);
+  });
+  updateProgress();
+}
+
+function updateProgress() {
+  const n = getVisited().length;
+  const total = placesList.length;
+  document.getElementById('doneCount').textContent = n;
+  document.getElementById('progressBar').style.width = `${(n/total)*100}%`;
+}
+
+// ═══════════════════════════════════════════════
+//  CONFETTI
+// ═══════════════════════════════════════════════
+function confetti(count=50) {
+  const colors = ['#FF2D78','#00F5FF','#FFD700','#39FF14','#B44FFF','#FF6B35','#fff'];
+  for (let i=0; i<count; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    const size = 6 + Math.random()*10;
+    el.style.cssText = `
+      left:${Math.random()*100}vw;
+      top:-20px;
+      width:${size}px; height:${size*1.6}px;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      animation-duration:${1.5+Math.random()*2.5}s;
+      animation-delay:${Math.random()*0.8}s;
+      border-radius:${Math.random()>0.5?'50%':'2px'};
+    `;
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+function soccerAnim() {
+  for (let i=0; i<8; i++) {
+    const el = document.createElement('div');
+    el.style.cssText = `
+      position:fixed; font-size:${2+Math.random()*2}rem;
+      left:${Math.random()*100}vw; top:${Math.random()*100}vh;
+      pointer-events:none; z-index:9999;
+      animation:confettiFall ${1+Math.random()*2}s linear forwards;
+      animation-delay:${Math.random()*0.5}s;
+    `;
+    el.textContent = '⚽';
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  FLOATING DECOS (hero)
+// ═══════════════════════════════════════════════
+function addDecos() {
+  const hero = document.getElementById('hero');
+  const items = ['⚽','🌴','🌊','⚽','🏖️','🌴','⚽','🌺'];
+  items.forEach((emoji, i) => {
+    const el = document.createElement('div');
+    el.className = 'hero-deco';
+    el.textContent = emoji;
+    el.style.cssText = `
+      left:${5+Math.random()*90}%;
+      animation-duration:${8+Math.random()*16}s;
+      animation-delay:-${Math.random()*20}s;
+      font-size:${3+Math.random()*4}rem;
+    `;
+    hero.appendChild(el);
+  });
+}
+
+// ═══════════════════════════════════════════════
+//  ESC KEY
+// ═══════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+    document.getElementById('lightbox').classList.remove('open');
+  }
+});
+
+// ═══════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════
+async function init() {
+  renderCalendar();
+  renderPlaces();
+  addDecos();
+  await openDB();
+  await refreshAlbum();
+}
+init();
+</script>
+</body>
+</html>
